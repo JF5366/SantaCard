@@ -1,0 +1,129 @@
+/* Insert any CSS code below here */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#outside {
+  z-index: 1;
+  position: absolute;
+  background-color: lightgray;
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 1s;
+  transition-delay: 1s;
+  transform-origin: 0;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.open-card {
+  transform: rotateY(90deg);
+}
+
+#outside-title {
+  color: whitesmoke;
+  font-family: "Mountains of Christmas";
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 16vh;
+  text-shadow: 2px 2px 8px #ff0000;
+}
+
+#outside-pic {
+  width: 300px;
+  height: auto;
+  transform: translateY(-50px);
+}
+
+#outside-help {
+  color: black;
+  font-family: Courier;
+  font-size: 12pt;
+  text-align: center;
+  padding: 20px;
+}
+
+#inside {
+  z-index: 0;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+#inside-title {
+  color: whitesmoke;
+  font-family: "Mountains of Christmas";
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 14vh;
+  text-shadow: 2px 2px 8px #ff0000;
+}
+
+#inside-pic {
+  width: 200px;
+  height: 300px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform: translateY(-35px);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: rotateX(45deg);
+  }
+  50% {
+    transform: rotateX(55deg) scale(0.8, 1.2) translate(0, -50px);
+  }
+}
+
+#message {
+  color: black;
+  font-family: Courier;
+  font-size: 12pt;
+  text-align: center;
+}
+
+button {
+  background: transparent;
+  color: red;
+  border: none;
+  border-radius: 30px;
+  padding: 0.4em;
+  font-family: "Mountains of Christmas";
+  font-size: 1.5em;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px white;
+}
+
+button:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out 0s;
+}
+#message {
+  color: white;
+  font-family: "Mountains of Christmas";
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 2px 2px 8px #ff0000;
+  transform: translateY(-20px);
+}
