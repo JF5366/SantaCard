@@ -1,5 +1,7 @@
 /* Insert any CSS code below here */
+html,
 body {
+  min-height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -7,10 +9,8 @@ body {
 #outside {
   z-index: 1;
   position: absolute;
-  background-color: lightgray;
-
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   text-align: center;
   transition: 1s;
   transition-delay: 1s;
@@ -30,11 +30,12 @@ body {
 #outside-title {
   color: whitesmoke;
   font-family: "Mountains of Christmas";
-  font-size: 50px;
+  font-size: 65px;
   font-weight: 700;
   text-align: center;
   margin-top: 16vh;
   text-shadow: 2px 2px 8px #ff0000;
+  padding-bottom: 10px;
 }
 
 #outside-pic {
@@ -53,6 +54,8 @@ body {
 
 #inside {
   z-index: 0;
+  min-height: 100%;
+  width: 100%;
   position: absolute;
   background-color: white;
   width: 100%;
@@ -69,36 +72,81 @@ body {
 #inside-title {
   color: whitesmoke;
   font-family: "Mountains of Christmas";
-  font-size: 45px;
+  font-size: 65px;
   font-weight: 700;
   text-align: center;
   margin-top: 14vh;
   text-shadow: 2px 2px 8px #ff0000;
+  margin-bottom: 30px;
 }
 
-#inside-pic {
+.santas {
+  display: inline-flex;
+}
+
+.red {
   width: 200px;
   height: 300px;
-  animation-name: bounce;
+  animation-name: bouncered;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  transform: translateY(-35px);
+}
+.green {
+  width: 200px;
+  height: 300px;
+  animation-name: bouncegreen;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   transform: translateY(-35px);
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: rotateX(45deg);
-  }
-  50% {
-    transform: rotateX(55deg) scale(0.8, 1.2) translate(0, -50px);
-  }
+.green {
+  width: 150px;
+  height: 250px;
 }
 
+#left1 {
+  transform: rotate(-8deg);
+  transform: translateX(45px);
+}
+#left2 {
+  transform: rotate(-8deg);
+  transform: translateX(25px);
+}
+
+#right1 {
+  transform: rotate(8deg);
+  transform: translateX(-25px);
+}
+#right2 {
+  transform: rotate(8deg);
+  transform: translateX(-45px);
+}
+
+@keyframes bouncered {
+  0%,
+  100% {
+    transform: ;
+  }
+  50% {
+    transform: scale(1.1, 1.3) translate(0, -40px);
+  }
+}
+@keyframes bouncegreen {
+  0%,
+  100% {
+    transform: ;
+  }
+  50% {
+    transform: scale(1, 1.1) translate(0, -40px);
+  }
+}
 #message {
   color: black;
   font-family: Courier;
-  font-size: 12pt;
+  font-size: 30pt;
   text-align: center;
 }
 
@@ -125,5 +173,5 @@ button:hover {
   font-weight: 400;
   text-align: center;
   text-shadow: 2px 2px 8px #ff0000;
-  transform: translateY(-20px);
+  transform: translateY(-50px);
 }
